@@ -61,7 +61,6 @@ const ProgramK2 = () => {
             title: 'Pelatihan Konselor Sebaya',
             description: 'Program pelatihan untuk mahasiswa yang ingin menjadi konselor sebaya dan membantu teman-temannya.',
             image: 'https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=1920',
-            animation: 'rotate',
         },
         {
             title: 'Workshop Psikologis',
@@ -102,20 +101,11 @@ const ProgramK2 = () => {
                                         alt={program.title}
                                         className="w-full h-full object-cover"
                                     />
-                                    <div className="absolute inset-0 bg-gradient-to-br from-moss/60 to-charcoal/85"></div>
+                                    <div className="absolute inset-0 bg-gradient-to-br from-black/40 to-black/70"></div>
                                 </div>
 
                                 {/* Animation Overlay */}
                                 <div className="absolute inset-0">
-                                    {program.animation === 'scan' && (
-                                        <div
-                                            className="w-full h-full animate-scan"
-                                            style={{
-                                                backgroundImage: 'linear-gradient(90deg, transparent 0%, rgba(136, 194, 115, 0.3) 50%, transparent 100%)',
-                                                backgroundSize: '200% 100%',
-                                            }}
-                                        ></div>
-                                    )}
                                     {program.animation === 'rotate' && (
                                         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
                                             <div className="w-32 h-32 border-4 border-cream/50 rounded-full animate-rotate"></div>

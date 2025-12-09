@@ -43,7 +43,7 @@ const Hero = () => {
                 />
                 {/* Gradient Overlays */}
                 <div className="absolute inset-0 bg-gradient-to-b from-moss/30 via-charcoal/50 to-charcoal/60"></div>
-                <div className="absolute inset-0 bg-gradient-to-t from-charcoal/90 via-transparent to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-charcoal/50 via-transparent to-transparent"></div>
             </div>
 
             {/* Content */}
@@ -52,7 +52,7 @@ const Hero = () => {
                     <h1 className="text-white text-5xl md:text-7xl font-outfit font-light tracking-tighter">
                         You Share,
                     </h1>
-                    <h2 className="text-cream text-7xl md:text-9xl font-cormorant italic font-bold">
+                    <h2 className="text-white text-7xl md:text-9xl font-cormorant italic font-bold">
                         We Care.
                     </h2>
                     <p className="text-white/80 text-lg md:text-xl max-w-2xl font-light mt-6">
