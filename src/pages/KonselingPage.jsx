@@ -5,9 +5,6 @@ import { ArrowLeft, Send, CheckCircle, Shield, Clock, Heart } from 'lucide-react
 const KonselingPage = () => {
     const [formData, setFormData] = useState({
         nama: '',
-        nim: '',
-        fakultas: '',
-        prodi: '',
         noHp: '',
         email: '',
         jenisLayanan: '',
@@ -17,15 +14,6 @@ const KonselingPage = () => {
 
     const [isSubmitted, setIsSubmitted] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
-
-    const fakultasList = [
-        'Fakultas Tarbiyah dan Ilmu Keguruan',
-        'Fakultas Syariah dan Hukum',
-        'Fakultas Ushuluddin dan Pemikiran Islam',
-        'Fakultas Dakwah dan Komunikasi',
-        'Fakultas Ekonomi dan Bisnis Islam',
-        'Fakultas Sains dan Teknologi',
-    ];
 
     const layananList = [
         'Kesehatan Mental',
@@ -97,13 +85,22 @@ const KonselingPage = () => {
     }
 
     return (
-        <div className="min-h-screen bg-cream">
+        <div className="min-h-screen relative">
+            {/* Background Image */}
+            <div className="fixed inset-0 z-0">
+                <img
+                    src="https://images.unsplash.com/photo-1645498579389-58fe451e90b4?q=80"
+                    alt="Supportive hand"
+                    className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-cream/20"></div>
+            </div>
             {/* Header */}
-            <div className="bg-charcoal py-6">
+            <div className="bg-moss py-6 relative z-10">
                 <div className="container mx-auto px-6 max-w-6xl">
                     <Link
                         to="/"
-                        className="inline-flex items-center gap-2 text-white/80 hover:text-white transition-colors"
+                        className="inline-flex items-center gap-2 text-white hover:text-white transition-colors"
                     >
                         <ArrowLeft size={20} />
                         <span>Kembali ke Beranda</span>
@@ -111,14 +108,14 @@ const KonselingPage = () => {
                 </div>
             </div>
 
-            <div className="container mx-auto px-6 max-w-6xl py-12">
+            <div className="container mx-auto px-6 max-w-6xl py-12 relative z-10">
                 <div className="grid lg:grid-cols-2 gap-12">
                     {/* Left Side - Info */}
                     <div>
                         <h1 className="text-4xl md:text-5xl font-outfit font-bold text-charcoal tracking-tighter mb-4">
                             Mulai Konseling
                         </h1>
-                        <p className="text-charcoal/70 text-lg mb-8">
+                        <p className="text-charcoal text-lg mb-8">
                             Isi formulir di bawah ini untuk mendaftar sesi konseling.
                             Data Anda dijamin kerahasiaannya.
                         </p>
@@ -131,7 +128,7 @@ const KonselingPage = () => {
                                 </div>
                                 <div>
                                     <h3 className="font-bold text-charcoal">100% Rahasia</h3>
-                                    <p className="text-charcoal/60 text-sm">Data dan cerita Anda dijamin kerahasiaannya</p>
+                                    <p className="text-charcoal text-sm">Data dan cerita Anda dijamin kerahasiaannya</p>
                                 </div>
                             </div>
 
@@ -141,7 +138,7 @@ const KonselingPage = () => {
                                 </div>
                                 <div>
                                     <h3 className="font-bold text-charcoal">Respon Cepat</h3>
-                                    <p className="text-charcoal/60 text-sm">Konfirmasi jadwal dalam 1x24 jam</p>
+                                    <p className="text-charcoal text-sm">Konfirmasi jadwal dalam 1x24 jam</p>
                                 </div>
                             </div>
 
@@ -151,7 +148,7 @@ const KonselingPage = () => {
                                 </div>
                                 <div>
                                     <h3 className="font-bold text-charcoal">Gratis</h3>
-                                    <p className="text-charcoal/60 text-sm">Layanan gratis untuk seluruh mahasiswa UNU</p>
+                                    <p className="text-charcoal text-sm">Layanan gratis untuk seluruh mahasiswa UNU</p>
                                 </div>
                             </div>
                         </div>
@@ -175,58 +172,6 @@ const KonselingPage = () => {
                                     placeholder="Masukkan nama lengkap"
                                 />
                             </div>
-
-                            {/* NIM */}
-                            <div>
-                                <label className="block text-charcoal font-medium mb-2">
-                                    NIM <span className="text-red-500">*</span>
-                                </label>
-                                <input
-                                    type="text"
-                                    name="nim"
-                                    value={formData.nim}
-                                    onChange={handleChange}
-                                    required
-                                    className="w-full px-4 py-3 rounded-xl border border-charcoal/20 focus:border-moss focus:ring-2 focus:ring-moss/20 outline-none transition-all"
-                                    placeholder="Masukkan NIM"
-                                />
-                            </div>
-
-                            {/* Fakultas */}
-                            <div>
-                                <label className="block text-charcoal font-medium mb-2">
-                                    Fakultas <span className="text-red-500">*</span>
-                                </label>
-                                <select
-                                    name="fakultas"
-                                    value={formData.fakultas}
-                                    onChange={handleChange}
-                                    required
-                                    className="w-full px-4 py-3 rounded-xl border border-charcoal/20 focus:border-moss focus:ring-2 focus:ring-moss/20 outline-none transition-all bg-white"
-                                >
-                                    <option value="">Pilih Fakultas</option>
-                                    {fakultasList.map((fak, idx) => (
-                                        <option key={idx} value={fak}>{fak}</option>
-                                    ))}
-                                </select>
-                            </div>
-
-                            {/* Program Studi */}
-                            <div>
-                                <label className="block text-charcoal font-medium mb-2">
-                                    Program Studi <span className="text-red-500">*</span>
-                                </label>
-                                <input
-                                    type="text"
-                                    name="prodi"
-                                    value={formData.prodi}
-                                    onChange={handleChange}
-                                    required
-                                    className="w-full px-4 py-3 rounded-xl border border-charcoal/20 focus:border-moss focus:ring-2 focus:ring-moss/20 outline-none transition-all"
-                                    placeholder="Masukkan program studi"
-                                />
-                            </div>
-
                             {/* No HP */}
                             <div>
                                 <label className="block text-charcoal font-medium mb-2">

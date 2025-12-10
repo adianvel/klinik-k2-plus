@@ -60,26 +60,20 @@ const FilosofiK2 = () => {
                 <div className="grid md:grid-cols-2 gap-16 items-center">
                     {/* Left Side */}
                     <div className="filosofi-text">
-                        <p className="text-moss text-sm font-outfit uppercase tracking-wider mb-4">
-                            Pendekatan Konvensional
-                        </p>
-                        <h3 className="text-white/40 text-3xl md:text-4xl font-light leading-tight">
+                        <h3 className="text-white text-3xl md:text-4xl font-light leading-tight">
                             Mereka bertanya
                         </h3>
-                        <h2 className="text-white/60 text-5xl md:text-6xl font-cormorant italic font-bold mt-2">
+                        <h2 className="text-white text-5xl md:text-6xl font-cormorant italic font-bold mt-2">
                             "Apa masalahmu?"
                         </h2>
                     </div>
 
                     {/* Right Side */}
                     <div className="filosofi-text">
-                        <p className="text-moss text-sm font-outfit uppercase tracking-wider mb-4">
-                            Pendekatan Kami
-                        </p>
                         <h3 className="text-white text-3xl md:text-4xl font-light leading-tight">
                             Kami bertanya
                         </h3>
-                        <h2 className="text-cream text-6xl md:text-7xl font-cormorant italic font-bold mt-2">
+                        <h2 className="text-white text-6xl md:text-7xl font-cormorant italic font-bold mt-2">
                             "Apa ceritamu?"
                         </h2>
                     </div>
@@ -87,7 +81,7 @@ const FilosofiK2 = () => {
 
                 {/* Manifesto Text */}
                 <div className="filosofi-text mt-20 max-w-3xl mx-auto text-center">
-                    <p className="text-white/70 text-lg md:text-xl leading-relaxed">
+                    <p className="text-white text-lg md:text-xl leading-relaxed">
                         Kami percaya setiap individu berhak didengar tanpa dihakimi. Dengan pendekatan
                         holistik — menggabungkan aspek psikologis, sosial, dan spiritual —
                         Klinik K2+ hadir sebagai ruang aman untuk membantumu menemukan keseimbangan
